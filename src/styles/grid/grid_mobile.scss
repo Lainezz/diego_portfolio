@@ -1,0 +1,141 @@
+@use "../global.scss" as *; // Import global variables
+
+@mixin grid_mobile {
+    .dark {
+        color: $base-color-snow;
+        background-color: var(--primary-color);
+
+        .main__grid {
+            @include base_mobile_grid_layout();
+
+            .grid__bio {
+                @include create_black_grid_element(1, 5, 2, 4);
+            }
+            .grid__socials {
+                @include create_black_grid_element(1, 5, 1, 2);
+            }
+            .grid__funct_1 {
+                //@include create_striped_funct_grid_element(1, 2, 5, 8);
+            }
+            .grid__hobbies {
+                @include create_black_grid_element(1, 5, 7, 9);
+            }
+            .grid__funct_2 {
+                //@include create_black_funct_grid_element(5, 7, 2, 3);
+            }
+            .grid__techs {
+                @include create_black_grid_element(1, 5, 9, 11);
+            }
+            .grid__lang {
+                @include create_black_grid_element(1, 5, 11, 13);
+            }
+            .grid__experience {
+                @include create_black_grid_element(1, 5, 4, 7);
+            }
+            .grid__funct_3 {
+                //@include create_sun_funct_grid_element(9, 10, 2, 5);
+            }
+            .grid__funct_4 {
+                //@include create_moon_funct_grid_element(9, 10, 5, 8);
+            }
+            .grid__footer {
+                @include create_black_grid_element(1, 4, 13, 14);
+            }
+            .grid__cc {
+                @include create_black_grid_element(4, 5, 13, 14);
+            }
+        }
+    }
+
+    .light {
+        color: $base-color-black-1;
+        background-color: var(--primary-color);
+
+        .main__grid {
+            @include base_mobile_grid_layout();
+
+            .grid__bio {
+                @include create_white_grid_element(1, 5, 2, 4);
+            }
+            .grid__socials {
+                @include create_white_grid_element(1, 5, 1, 2);
+            }
+            .grid__funct_1 {
+                //@include create_striped_funct_grid_element(1, 2, 5, 8);
+            }
+            .grid__hobbies {
+                @include create_white_grid_element(1, 5, 7, 9);
+            }
+            .grid__funct_2 {
+                //@include create_black_funct_grid_element(5, 7, 2, 3);
+            }
+            .grid__techs {
+                @include create_white_grid_element(1, 5, 9, 11);
+            }
+            .grid__lang {
+                @include create_white_grid_element(1, 5, 11, 13);
+            }
+            .grid__experience {
+                @include create_white_grid_element(1, 5, 4, 7);
+            }
+            .grid__funct_3 {
+                //@include create_sun_funct_grid_element(9, 10, 2, 5);
+            }
+            .grid__funct_4 {
+                //@include create_moon_funct_grid_element(9, 10, 5, 8);
+            }
+            .grid__footer {
+                @include create_white_grid_element(1, 4, 13, 14);
+            }
+            .grid__cc {
+                @include create_white_grid_element(4, 5, 13, 14);
+            }
+        }
+    }
+
+    .colorful {
+        color: $base-color-black-1;
+        background-color: var(--primary-color);
+
+        .main__grid {
+            @include base_mobile_grid_layout();
+
+            .grid__bio {
+                @include create_colorful_grid_element(1, 5, 2, 4);
+            }
+            .grid__socials {
+                @include create_colorful_grid_element(1, 5, 1, 2);
+            }
+            .grid__funct_1 {
+                //@include create_striped_funct_grid_element(1, 2, 5, 8);
+            }
+            .grid__hobbies {
+                @include create_colorful_grid_element(1, 5, 7, 9);
+            }
+            .grid__funct_2 {
+                //@include create_black_funct_grid_element(5, 7, 2, 3);
+            }
+            .grid__techs {
+                @include create_colorful_grid_element(1, 5, 9, 11);
+            }
+            .grid__lang {
+                @include create_colorful_grid_element(1, 5, 11, 13);
+            }
+            .grid__experience {
+                @include create_colorful_grid_element(1, 5, 4, 7);
+            }
+            .grid__funct_3 {
+                //@include create_sun_funct_grid_element(9, 10, 2, 5);
+            }
+            .grid__funct_4 {
+                //@include create_moon_funct_grid_element(9, 10, 5, 8);
+            }
+            .grid__footer {
+                @include create_colorful_grid_element(1, 4, 13, 14);
+            }
+            .grid__cc {
+                @include create_colorful_grid_element(4, 5, 13, 14);
+            }
+        }
+    }
+}

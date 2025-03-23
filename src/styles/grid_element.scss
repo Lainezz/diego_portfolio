@@ -1,0 +1,9 @@
+@use './grid/grid_desktop.scss' as *;
+@use './grid/grid_mobile.scss' as *;
+@use './global.scss' as *;
+
+@include grid_mobile;
+
+@include responsive($width-sm-desktop) {
+    @include grid_desktop;
+}

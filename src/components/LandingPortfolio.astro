@@ -1,0 +1,40 @@
+---
+import { Picture } from "astro:assets";
+//Socials
+import linkedin from "../assets/images/socials/linkedin.svg";
+import github from "../assets/images/socials/github.svg";
+import github_white from "../assets/images/socials/github_white.svg";
+import instagram from "../assets/images/socials/instagram.svg";
+import x from "../assets/images/socials/x.svg";
+import x_white from "../assets/images/socials/x_white.svg";
+import twitch from "../assets/images/socials/twitch.svg";
+
+// works
+import viewnext from "../assets/images/works/viewnext.png";
+import junta_andalucia from "../assets/images/works/junta_andalucia.svg";
+import ec from "../assets/images/works/european_commission.svg";
+
+// edu
+import ual from "../assets/images/edu/ual.png";
+import ugr from "../assets/images/edu/ugr.svg";
+
+// SCSS
+import "../styles/grid_element.scss";
+
+// COMPONENTS
+import FunctDivs from "./change_theme_divs/FunctDivs.astro";
+---
+
+<main class="main__grid">
+    <section class="grid__bio"></section>
+    <section class="grid__socials"></section>
+    <section class="grid__hobbies"></section>
+    
+    <section class="grid__techs"></section>
+    <section class="grid__lang"></section>
+    <section class="grid__experience"></section>
+    <section class="grid__footer"></section>
+    <section class="grid__cc"></section>
+
+    <FunctDivs />
+</main>

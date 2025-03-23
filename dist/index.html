@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.5.4"><title>Astro Basics</title><link rel="stylesheet" href="/_astro/index.DLKQH-zp.css"></head> <body>  <main class="main__grid"> <section class="grid__bio"></section> <section class="grid__socials"></section> <section class="grid__hobbies"></section> <section class="grid__techs"></section> <section class="grid__lang"></section> <section class="grid__experience"></section> <section class="grid__footer"></section> <section class="grid__cc"></section> <section id="grid__funct_1" class="grid__funct_1"></section> <section id="grid__funct_2" class="grid__funct_2"></section> <section id="grid__funct_3" class="grid__funct_3"></section> <section id="grid__funct_4" class="grid__funct_4"></section> <script>
+    function getRandomColor() {
+        let colors = [
+            "#111111",
+            "#303030",
+            "#F5F5F5",
+            "#6997a5",
+            "#5a9eb9",
+            "#ff934b",
+            "#FCCA46",
+            "#ceffb2",
+            "#619B8A",
+            "#B1B1B1",
+            "#9f70b4",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // THEME ES GLOBAL
+    const theme = (() => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("theme")
+        ) {
+            return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+        }
+
+        return "light";
+    })();
+
+    const handleToggleFunct2 = () => {
+        document.documentElement.style.setProperty(
+            "--primary-color",
+            `${getRandomColor()}`
+        );
+    };
+
+    // COMPONENTE
+    const handleToggleClickSun = () => {
+        const element = document.documentElement;
+        element.classList.remove("dark");
+        element.classList.remove("colorful");
+        element.classList.add("light");
+
+        localStorage.setItem("theme", "light");
+
+        document.documentElement.style.setProperty(
+            "--primary-color",
+            `#f4f4f4`
+        );
+    };
+
+    // COMPONENTE
+    const handleToggleClickMoon = () => {
+        const element = document.documentElement;
+        element.classList.remove("light");
+        element.classList.remove("colorful");
+        element.classList.add("dark");
+
+        localStorage.setItem("theme", "dark");
+
+        document.documentElement.style.setProperty(
+            "--primary-color",
+            `#111111`
+        );
+    };
+
+    // COMPONENTE
+    const handleToggleClickColorful = () => {
+        const element = document.documentElement;
+        element.classList.remove("light");
+        element.classList.remove("dark");
+        element.classList.add("colorful");
+
+        localStorage.setItem("theme", "colorful");
+
+        document.documentElement.style.setProperty(
+            "--primary-color",
+            `${getRandomColor()}`
+        );
+    };
+
+    function changeThemeListener() {
+        const element = document.documentElement;
+        // GLOBAL
+        if (theme === "light") {
+            element.classList.remove("dark");
+            element.classList.remove("colorful");
+            element.classList.add("light");
+            document.documentElement.style.setProperty(
+                "--primary-color",
+                `#f4f4f4`
+            );
+        } else if (theme === "colorful") {
+            element.classList.remove("light");
+            element.classList.remove("dark");
+            element.classList.add("colorful");
+            document.documentElement.style.setProperty(
+                "--primary-color",
+                `${getRandomColor()}`
+            );
+        } else {
+            element.classList.remove("light");
+            element.classList.remove("colorful");
+            element.classList.add("dark");
+            document.documentElement.style.setProperty(
+                "--primary-color",
+                `#111111`
+            );
+        }
+
+        // GLOBAL
+        window.localStorage.setItem("theme", theme);
+
+        // PERTENECE AL COMPONENTE
+        document
+            .getElementById("grid__funct_4")
+            .addEventListener("click", handleToggleClickMoon);
+        document
+            .getElementById("grid__funct_3")
+            .addEventListener("click", handleToggleClickSun);
+        document
+            .getElementById("grid__funct_1")
+            .addEventListener("click", handleToggleClickColorful);
+        document
+            .getElementById("grid__funct_2")
+            .addEventListener("click", handleToggleFunct2);
+    }
+
+    window.addEventListener("DOMContentLoaded", changeThemeListener);
+</script> </main>  </body></html>
