@@ -26,6 +26,7 @@
             }
             .grid__techs {
                 @include create_black_grid_element(5, 7, 3, 6);
+                @include techs;
             }
             .grid__lang {
                 @include create_black_grid_element(5, 7, 6, 8);
@@ -74,6 +75,7 @@
             }
             .grid__techs {
                 @include create_white_grid_element(5, 7, 3, 6);
+                @include techs;
             }
             .grid__lang {
                 @include create_white_grid_element(5, 7, 6, 8);
@@ -122,6 +124,7 @@
             }
             .grid__techs {
                 @include create_colorful_grid_element(5, 7, 3, 6);
+                @include techs;
             }
             .grid__lang {
                 @include create_colorful_grid_element(5, 7, 6, 8);

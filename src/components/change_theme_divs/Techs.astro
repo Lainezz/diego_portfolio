@@ -1,0 +1,74 @@
+---
+import { Picture } from "astro:assets";
+import plus from "../../assets/images/other/plus.svg";
+import minus from "../../assets/images/other/minus.svg";
+import java from "../../assets/images/techs/java.svg";
+import kotlin from "../../assets/images/techs/kotlin.svg";
+import spring from "../../assets/images/techs/spring.svg";
+import js from "../../assets/images/techs/javascript.svg";
+import nodejs from "../../assets/images/techs/nodejs.svg";
+import html5 from "../../assets/images/techs/html5.svg";
+import css3 from "../../assets/images/techs/css3.svg";
+import sass from "../../assets/images/techs/sass.svg";
+import astro from "../../assets/images/techs/astro.svg";
+
+/*
+Tengo que cambiar los logos del + y del -
+Idea de poner un texto en vertical "expertise + y -" para poder cambiar el color del texto.
+
+
+Voy a quitar el expertise bar. Al final no me deja suficiente espacio para poner los
+logos de las tecnologías.
+
+Probar a poner todos los logos que pueda y ver si al final puedo dejar el expertise bar
+o no.
+De más a menos:
+Spring
+JavaScript
+HTML
+CSS
+SASS
+Astro
+Express.js
+NodeJS
+MongoDB
+MySQL
+Mongoose
+
+Python
+IntelliJ
+Github
+Git
+
+Ubuntu
+
+
+IDEA!!!!
+Cada caja redirige, dentro de la misma página, a la zona donde se desarrolla dicha sección.
+
+*/
+
+---
+
+<div class="techs__title">TECHS</div>
+<div class="techs__info">
+    <!-- CREO QUE VOY A QUITAR EL EXPERTISE BAR. AL FINAL  -->
+    <div class="info__expertise_bar">
+        <Picture src={plus} alt="+" class="expertise_bar__icon" />
+        <Picture src={minus} alt="-" class="expertise_bar__icon" />
+    </div>
+    <div class="info__techs_info">
+
+            <Picture src={java} alt="Java" class="techs_info__icon" />
+            <Picture src={kotlin} alt="Java" class="techs_info__icon" />
+            <Picture src={spring} alt="Spring" class="techs_info__icon" />
+            <Picture src={nodejs} alt="Spring" class="techs_info__icon" />
+            <Picture src={js} alt="JavaScript" class="techs_info__icon" />
+            <Picture src={html5} alt="HTML5" class="techs_info__icon" />
+            <Picture src={css3} alt="CSS3" class="techs_info__icon" />
+            <Picture src={sass} alt="SASS" class="techs_info__icon" />
+            <Picture src={astro} alt="Astro" class="techs_info__icon" />
+
+        </div>
+    </div>
+</div>

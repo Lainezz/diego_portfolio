@@ -27,14 +27,3 @@ import twitch from "../../assets/images/socials/twitch.svg";
 <a href="#" target="_blank" rel="noopener noreferrer" class="socials__a">
     <Picture src={twitch} alt="Twitch" class="socials__icon" />
 </a>
-
-<script is:inline>
-    var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutationRecord) {
-            console.log("style changed!");
-        });
-    });
-
-    var target = document.documentElement;
-    observer.observe(target, { attributes: true, attributeFilter: ["style"] });
-</script>

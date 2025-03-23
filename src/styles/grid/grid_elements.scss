@@ -1,7 +1,6 @@
 @use "../global.scss" as *; // Import global variables
 
 @mixin bio {
-
     position: relative;
 
     .bio__title {
@@ -31,29 +30,80 @@
         justify-content: center;
 
         z-index: 1;
-
     }
 }
 
 @mixin socials {
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
     .socials__icon {
-
         width: 2em;
         height: auto;
-
     }
 
-    .display_none  {
+    .display_none {
         display: none;
     }
-
 }
 
+@mixin techs {
+    .techs__title {
+        font-weight: bold;
+    }
+
+    .techs__info {
+        display: flex;
+        min-height: 90%;
+        padding-top: 1em;
+
+        .info__expertise_bar {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em 0.5em 1em 0;
+
+            .expertise_bar__icon {
+                width: .5em;
+                height: auto;
+            }
+        }
+
+        .info__expertise_bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            border-radius: 1em;
+            background: linear-gradient(
+                rgba(206, 255, 178, 1) 0%,
+                rgba(90, 158, 185, 1) 50%,
+                rgba(159, 112, 180, 1) 100%
+            );
+        }
+
+        .info__techs_info {
+
+            padding-left: .5em;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            column-gap: .2em;
+
+
+            .techs_info__icon {
+                width: 2em;
+                height: auto;
+            }
+
+        }
+    }
+}
 
 @mixin funct {
     display: flex;
