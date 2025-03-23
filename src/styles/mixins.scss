@@ -26,6 +26,9 @@
     column-gap: 1em;
     row-gap: 1em;
     padding: 1em;
+
+    color: var(--font-color);
+    background-color: var(--background-color);
 }
 // BASE GRID LAYOUT FOR MOBILE
 @mixin base_mobile_grid_layout {
@@ -80,11 +83,13 @@
 }
 @mixin create_sun_funct_grid_element($st_column, $end_column, $st_row, $end_row) {
     @include create_grid_element($st_column, $end_column, $st_row, $end_row);
+    color: $base-color-moon;
     background-color: $base-color-sun;
     cursor: pointer;
 }
 @mixin create_moon_funct_grid_element($st_column, $end_column, $st_row, $end_row) {
     @include create_grid_element($st_column, $end_column, $st_row, $end_row);
+    color: $base-color-sun;
     background-color: $base-color-moon;
     cursor: pointer;
 }
@@ -104,6 +109,8 @@
     $color7: random-color();
     $color8: random-color();
     $color9: random-color();
+
+    color: $base-color-black-1;
     background: repeating-linear-gradient(
         135deg,
         $color1,

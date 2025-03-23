@@ -1,7 +1,23 @@
-<section id="grid__funct_1" class="grid__funct_1"></section>
+---
+import { Picture } from "astro:assets";
+import sun from "../../assets/images/theme/sun.svg";
+import moon from "../../assets/images/theme/moon.svg";
+---
+
+<section id="grid__funct_1" class="grid__funct_1">RAINBOW</section>
 <section id="grid__funct_2" class="grid__funct_2"></section>
-<section id="grid__funct_3" class="grid__funct_3"></section>
-<section id="grid__funct_4" class="grid__funct_4"></section>
+<section id="grid__funct_3" class="grid__funct_3">
+    <div class="funct__text">SUN</div>
+    <div class="funct__icon">
+        <Picture src={sun} alt="Sun" class="icon__sun"/>
+    </div>
+</section>
+<section id="grid__funct_4" class="grid__funct_4">
+    <div class="funct__text">MOON</div>
+    <div class="funct__icon">
+        <Picture src={moon} alt="Moon" class="icon__moon"/>
+    </div>
+</section>
 
 <script is:inline>
     function getRandomColor() {
@@ -38,9 +54,10 @@
 
     const handleToggleFunct2 = () => {
         document.documentElement.style.setProperty(
-            "--primary-color",
+            "--background-color",
             `${getRandomColor()}`
         );
+        document.documentElement.style.setProperty("--font-color", `#111111`);
     };
 
     // COMPONENTE
@@ -53,9 +70,10 @@
         localStorage.setItem("theme", "light");
 
         document.documentElement.style.setProperty(
-            "--primary-color",
+            "--background-color",
             `#f4f4f4`
         );
+        document.documentElement.style.setProperty("--font-color", `#111111`);
     };
 
     // COMPONENTE
@@ -68,9 +86,10 @@
         localStorage.setItem("theme", "dark");
 
         document.documentElement.style.setProperty(
-            "--primary-color",
+            "--background-color",
             `#111111`
         );
+        document.documentElement.style.setProperty("--font-color", `#f4f4f4`);
     };
 
     // COMPONENTE
@@ -83,9 +102,10 @@
         localStorage.setItem("theme", "colorful");
 
         document.documentElement.style.setProperty(
-            "--primary-color",
+            "--background-color",
             `${getRandomColor()}`
         );
+        document.documentElement.style.setProperty("--font-color", `#111111`);
     };
 
     function changeThemeListener() {
@@ -96,24 +116,36 @@
             element.classList.remove("colorful");
             element.classList.add("light");
             document.documentElement.style.setProperty(
-                "--primary-color",
+                "--background-color",
                 `#f4f4f4`
+            );
+            document.documentElement.style.setProperty(
+                "--font-color",
+                `#111111`
             );
         } else if (theme === "colorful") {
             element.classList.remove("light");
             element.classList.remove("dark");
             element.classList.add("colorful");
             document.documentElement.style.setProperty(
-                "--primary-color",
+                "--background-color",
                 `${getRandomColor()}`
+            );
+            document.documentElement.style.setProperty(
+                "--font-color",
+                `#111111`
             );
         } else {
             element.classList.remove("light");
             element.classList.remove("colorful");
             element.classList.add("dark");
             document.documentElement.style.setProperty(
-                "--primary-color",
+                "--background-color",
                 `#111111`
+            );
+            document.documentElement.style.setProperty(
+                "--font-color",
+                `#f4f4f4`
             );
         }
 
@@ -122,17 +154,17 @@
 
         // PERTENECE AL COMPONENTE
         document
-            .getElementById("grid__funct_4")
-            .addEventListener("click", handleToggleClickMoon);
-        document
-            .getElementById("grid__funct_3")
-            .addEventListener("click", handleToggleClickSun);
-        document
             .getElementById("grid__funct_1")
             .addEventListener("click", handleToggleClickColorful);
         document
             .getElementById("grid__funct_2")
             .addEventListener("click", handleToggleFunct2);
+        document
+            .getElementById("grid__funct_3")
+            .addEventListener("click", handleToggleClickSun);
+        document
+            .getElementById("grid__funct_4")
+            .addEventListener("click", handleToggleClickMoon);
     }
 
     window.addEventListener("DOMContentLoaded", changeThemeListener);

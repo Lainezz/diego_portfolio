@@ -1,0 +1,28 @@
+@use "../global.scss" as *; // Import global variables
+
+
+@mixin funct {
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .funct__text {
+        font-weight: bold;
+    }
+
+    .funct__icon {
+        .icon__sun {
+            width: 2em;
+            height: auto;
+            fill: rgb(192, 23, 51);
+        }
+        .icon__moon {
+            transform: rotate(135deg);
+            width: 2em;
+            height: auto;
+        }
+        
+    }
+}
