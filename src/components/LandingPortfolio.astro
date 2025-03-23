@@ -23,15 +23,19 @@ import "../styles/main_grid.scss";
 
 // COMPONENTS
 import FunctDivs from "./change_theme_divs/FunctDivs.astro";
+import Bio from "./change_theme_divs/Bio.astro";
+import Socials from "./change_theme_divs/Socials.astro";
 ---
 
 <main class="main__grid">
     <section class="grid__bio">
-        HOLA
+        <Bio />
     </section>
-    <section class="grid__socials"></section>
+    <section class="grid__socials">
+        <Socials />
+    </section>
     <section class="grid__hobbies"></section>
-    
+
     <section class="grid__techs"></section>
     <section class="grid__lang"></section>
     <section class="grid__experience"></section>

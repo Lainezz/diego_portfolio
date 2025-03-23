@@ -1,4 +1,4 @@
-@use './variables.scss' as *;
+@use "./variables.scss" as *;
 @use "sass:math";
 @use "sass:list";
 
@@ -47,7 +47,6 @@
     row-gap: 1em;
     padding: 1em;
 }
-
 
 // GRID ELEMENT
 @mixin create_grid_element($st_column, $end_column, $st_row, $end_row) {
@@ -130,7 +129,7 @@
         $color8 70px,
         $color8 80px,
         $color9 80px,
-        $color9 90px,
+        $color9 90px
     );
     cursor: pointer;
 }
@@ -153,20 +152,14 @@
 }
 
 @function random-black-color() {
-    $colors: (
-        $base-color-black-2,
-        $base-color-black-3
-    );
+    $colors: ($base-color-black-2, $base-color-black-3);
 
     $rd: math.random(list.length($colors)); // Genera un número entre 1 y 8
     @return list.nth($colors, $rd);
 }
 
 @function random-white-color() {
-    $colors: (
-        $base-color-off-white,
-        $base-color-light-gray
-    );
+    $colors: ($base-color-off-white, $base-color-light-gray);
 
     $rd: math.random(list.length($colors)); // Genera un número entre 1 y 8
     @return list.nth($colors, $rd);

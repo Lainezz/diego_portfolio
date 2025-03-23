@@ -3,15 +3,16 @@
 
 @mixin grid_desktop {
     .dark {
-        
         .main__grid {
             @include base_grid_layout();
 
             .grid__bio {
                 @include create_black_grid_element(1, 5, 1, 5);
+                @include bio;
             }
             .grid__socials {
                 @include create_black_grid_element(5, 10, 1, 2);
+                @include socials;
             }
             .grid__funct_1 {
                 @include create_striped_funct_grid_element(1, 2, 5, 8);
@@ -50,15 +51,16 @@
     }
 
     .light {
-
         .main__grid {
             @include base_grid_layout();
 
             .grid__bio {
                 @include create_white_grid_element(1, 5, 1, 5);
+                @include bio;
             }
             .grid__socials {
                 @include create_white_grid_element(5, 10, 1, 2);
+                @include socials;
             }
             .grid__funct_1 {
                 @include create_striped_funct_grid_element(1, 2, 5, 8);
@@ -102,9 +104,11 @@
 
             .grid__bio {
                 @include create_colorful_grid_element(1, 5, 1, 5);
+                @include bio;
             }
             .grid__socials {
                 @include create_colorful_grid_element(5, 10, 1, 2);
+                @include socials;
             }
             .grid__funct_1 {
                 @include create_striped_funct_grid_element(1, 2, 5, 8);

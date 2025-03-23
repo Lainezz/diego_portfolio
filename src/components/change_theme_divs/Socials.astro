@@ -1,0 +1,40 @@
+---
+import { Picture } from "astro:assets";
+//Socials
+import linkedin from "../../assets/images/socials/linkedin.svg";
+import github from "../../assets/images/socials/github.svg";
+import github_white from "../../assets/images/socials/github_white.svg";
+import instagram from "../../assets/images/socials/instagram.svg";
+import x from "../../assets/images/socials/x.svg";
+import x_white from "../../assets/images/socials/x_white.svg";
+import twitch from "../../assets/images/socials/twitch.svg";
+---
+
+<a href="https://www.linkedin.com/in/diegolinort/" target="_blank" rel="noopener noreferrer" class="socials__a">
+    <Picture src={linkedin} alt="LinkedIn" class="socials__icon" />
+</a>
+<a href="https://github.com/Lainezz" target="_blank" rel="noopener noreferrer" class="socials__a">
+    <Picture src={github_white} id="github_white_logo" alt="GitHub" class="socials__icon" />
+    <Picture src={github} id="github_black_logo" alt="GitHub" class="socials__icon display_none" />
+</a>
+<a href="#" target="_blank" rel="noopener noreferrer" class="socials__a">
+    <Picture src={instagram} alt="Instagram" class="socials__icon" />
+</a>
+<a href="#" target="_blank" rel="noopener noreferrer" class="socials__a">
+    <Picture src={x_white} id="x_white_logo" alt="X" class="socials__icon" />
+    <Picture src={x} id="x_black_logo" alt="X" class="socials__icon display_none" />
+</a>
+<a href="#" target="_blank" rel="noopener noreferrer" class="socials__a">
+    <Picture src={twitch} alt="Twitch" class="socials__icon" />
+</a>
+
+<script is:inline>
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+            console.log("style changed!");
+        });
+    });
+
+    var target = document.documentElement;
+    observer.observe(target, { attributes: true, attributeFilter: ["style"] });
+</script>

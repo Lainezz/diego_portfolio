@@ -8,24 +8,47 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 <section id="grid__funct_1" class="grid__funct_1">
     <div class="funct__text">RAINBOW</div>
     <div class="funct__icon">
-        <Picture src={rainbow} alt="Rainbow" class="icon__rainbow"/>
+        <Picture src={rainbow} alt="Rainbow" class="icon__rainbow" />
     </div>
 </section>
 <section id="grid__funct_2" class="grid__funct_2"></section>
 <section id="grid__funct_3" class="grid__funct_3">
     <div class="funct__text">SUN</div>
     <div class="funct__icon">
-        <Picture src={sun} alt="Sun" class="icon__sun"/>
+        <Picture src={sun} alt="Sun" class="icon__sun" />
     </div>
 </section>
 <section id="grid__funct_4" class="grid__funct_4">
     <div class="funct__text">MOON</div>
     <div class="funct__icon">
-        <Picture src={moon} alt="Moon" class="icon__moon"/>
+        <Picture src={moon} alt="Moon" class="icon__moon" />
     </div>
 </section>
 
 <script is:inline>
+    function changeSocialsIconToBlackIcon() {
+        let githubBlackIcon = document.querySelector("#github_black_logo");
+        let githubWhiteIcon = document.querySelector("#github_white_logo");
+        let xBlackIcon = document.querySelector("#x_black_logo");
+        let xWhiteIcon = document.querySelector("#x_white_logo");
+
+        if (githubBlackIcon.classList.contains("display_none")) githubBlackIcon.classList.remove("display_none");
+        if (!githubWhiteIcon.classList.contains("display_none")) githubWhiteIcon.classList.add("display_none");
+        if (xBlackIcon.classList.contains("display_none")) xBlackIcon.classList.remove("display_none");
+        if (!xWhiteIcon.classList.contains("display_none")) xWhiteIcon.classList.add("display_none");
+    }
+    function changeSocialsIconToWhiteIcon() {
+        let githubBlackIcon = document.querySelector("#github_black_logo");
+        let githubWhiteIcon = document.querySelector("#github_white_logo");
+        let xBlackIcon = document.querySelector("#x_black_logo");
+        let xWhiteIcon = document.querySelector("#x_white_logo");
+
+        if (githubWhiteIcon.classList.contains("display_none")) githubWhiteIcon.classList.remove("display_none");
+        if (!githubBlackIcon.classList.contains("display_none")) githubBlackIcon.classList.add("display_none");
+        if (xWhiteIcon.classList.contains("display_none")) xWhiteIcon.classList.remove("display_none");
+        if (!xBlackIcon.classList.contains("display_none")) xBlackIcon.classList.add("display_none");
+    }
+
     function getRandomColor() {
         let colors = [
             "#111111",
@@ -45,10 +68,7 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 
     // THEME ES GLOBAL
     const theme = (() => {
-        if (
-            typeof localStorage !== "undefined" &&
-            localStorage.getItem("theme")
-        ) {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
             return localStorage.getItem("theme");
         }
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -59,11 +79,7 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
     })();
 
     const handleToggleFunct2 = () => {
-        document.documentElement.style.setProperty(
-            "--background-color",
-            `${getRandomColor()}`
-        );
-        document.documentElement.style.setProperty("--font-color", `#111111`);
+        document.documentElement.style.setProperty("--background-color", `${getRandomColor()}`);
     };
 
     // COMPONENTE
@@ -75,11 +91,10 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 
         localStorage.setItem("theme", "light");
 
-        document.documentElement.style.setProperty(
-            "--background-color",
-            `#f4f4f4`
-        );
+        document.documentElement.style.setProperty("--background-color", `#f4f4f4`);
         document.documentElement.style.setProperty("--font-color", `#111111`);
+
+        changeSocialsIconToBlackIcon();
     };
 
     // COMPONENTE
@@ -91,11 +106,9 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 
         localStorage.setItem("theme", "dark");
 
-        document.documentElement.style.setProperty(
-            "--background-color",
-            `#111111`
-        );
+        document.documentElement.style.setProperty("--background-color", `#111111`);
         document.documentElement.style.setProperty("--font-color", `#f4f4f4`);
+        changeSocialsIconToWhiteIcon();
     };
 
     // COMPONENTE
@@ -107,11 +120,8 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 
         localStorage.setItem("theme", "colorful");
 
-        document.documentElement.style.setProperty(
-            "--background-color",
-            `${getRandomColor()}`
-        );
         document.documentElement.style.setProperty("--font-color", `#111111`);
+        changeSocialsIconToBlackIcon();
     };
 
     function changeThemeListener() {
@@ -121,56 +131,33 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
             element.classList.remove("dark");
             element.classList.remove("colorful");
             element.classList.add("light");
-            document.documentElement.style.setProperty(
-                "--background-color",
-                `#f4f4f4`
-            );
-            document.documentElement.style.setProperty(
-                "--font-color",
-                `#111111`
-            );
+            document.documentElement.style.setProperty("--background-color", `#f4f4f4`);
+            document.documentElement.style.setProperty("--font-color", `#111111`);
+
+            changeSocialsIconToBlackIcon();
         } else if (theme === "colorful") {
             element.classList.remove("light");
             element.classList.remove("dark");
             element.classList.add("colorful");
-            document.documentElement.style.setProperty(
-                "--background-color",
-                `${getRandomColor()}`
-            );
-            document.documentElement.style.setProperty(
-                "--font-color",
-                `#111111`
-            );
+            document.documentElement.style.setProperty("--font-color", `#111111`);
+            changeSocialsIconToBlackIcon();
         } else {
             element.classList.remove("light");
             element.classList.remove("colorful");
             element.classList.add("dark");
-            document.documentElement.style.setProperty(
-                "--background-color",
-                `#111111`
-            );
-            document.documentElement.style.setProperty(
-                "--font-color",
-                `#f4f4f4`
-            );
+            document.documentElement.style.setProperty("--background-color", `#111111`);
+            document.documentElement.style.setProperty("--font-color", `#f4f4f4`);
+            changeSocialsIconToWhiteIcon();
         }
 
         // GLOBAL
         window.localStorage.setItem("theme", theme);
 
         // PERTENECE AL COMPONENTE
-        document
-            .getElementById("grid__funct_1")
-            .addEventListener("click", handleToggleClickColorful);
-        document
-            .getElementById("grid__funct_2")
-            .addEventListener("click", handleToggleFunct2);
-        document
-            .getElementById("grid__funct_3")
-            .addEventListener("click", handleToggleClickSun);
-        document
-            .getElementById("grid__funct_4")
-            .addEventListener("click", handleToggleClickMoon);
+        document.getElementById("grid__funct_1").addEventListener("click", handleToggleClickColorful);
+        document.getElementById("grid__funct_2").addEventListener("click", handleToggleFunct2);
+        document.getElementById("grid__funct_3").addEventListener("click", handleToggleClickSun);
+        document.getElementById("grid__funct_4").addEventListener("click", handleToggleClickMoon);
     }
 
     window.addEventListener("DOMContentLoaded", changeThemeListener);
