@@ -2,9 +2,15 @@
 import { Picture } from "astro:assets";
 import sun from "../../assets/images/theme/sun.svg";
 import moon from "../../assets/images/theme/moon.svg";
+import rainbow from "../../assets/images/theme/rainbow.svg";
 ---
 
-<section id="grid__funct_1" class="grid__funct_1">RAINBOW</section>
+<section id="grid__funct_1" class="grid__funct_1">
+    <div class="funct__text">RAINBOW</div>
+    <div class="funct__icon">
+        <Picture src={rainbow} alt="Rainbow" class="icon__rainbow"/>
+    </div>
+</section>
 <section id="grid__funct_2" class="grid__funct_2"></section>
 <section id="grid__funct_3" class="grid__funct_3">
     <div class="funct__text">SUN</div>
