@@ -51,9 +51,9 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
 
     function getRandomColor() {
         let colors = [
-            "#111111",
-            "#303030",
-            "#F5F5F5",
+            //"#111111",
+            //"#303030",
+            //"#F5F5F5",
             "#6997a5",
             "#5a9eb9",
             "#ff934b",
@@ -121,6 +121,7 @@ import rainbow from "../../assets/images/theme/rainbow.svg";
         localStorage.setItem("theme", "colorful");
 
         document.documentElement.style.setProperty("--font-color", `#111111`);
+        document.documentElement.style.setProperty("--background-color", `${getRandomColor()}`);
         changeSocialsIconToBlackIcon();
     };
 

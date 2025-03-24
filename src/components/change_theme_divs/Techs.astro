@@ -11,6 +11,13 @@ import html5 from "../../assets/images/techs/html5.svg";
 import css3 from "../../assets/images/techs/css3.svg";
 import sass from "../../assets/images/techs/sass.svg";
 import astro from "../../assets/images/techs/astro.svg";
+import python from "../../assets/images/techs/python.svg";
+import mongodb from "../../assets/images/techs/mongodb.svg";
+import mysql from "../../assets/images/techs/mysql.svg";
+import laravel from "../../assets/images/techs/laravel.svg";
+import php from "../../assets/images/techs/php.svg";
+import git from "../../assets/images/techs/git.svg";
+import ubuntu from "../../assets/images/techs/ubuntu.svg";
 
 /*
 Tengo que cambiar los logos del + y del -
@@ -23,52 +30,102 @@ logos de las tecnologías.
 Probar a poner todos los logos que pueda y ver si al final puedo dejar el expertise bar
 o no.
 De más a menos:
-Spring
-JavaScript
-HTML
-CSS
-SASS
-Astro
-Express.js
-NodeJS
-MongoDB
-MySQL
-Mongoose
+Spring -
+JavaScript -
+HTML -
+CSS -
+SASS -
+Astro -
+Express.js X
+NodeJS - 
+MongoDB -
+MySQL -
+Mongoose X
+Laravel -
+PHP -
 
-Python
+Python -
 IntelliJ
 Github
-Git
+Git -
 
-Ubuntu
+Ubuntu -
 
 
 IDEA!!!!
 Cada caja redirige, dentro de la misma página, a la zona donde se desarrolla dicha sección.
 
 */
-
 ---
 
 <div class="techs__title">TECHS</div>
 <div class="techs__info">
     <!-- CREO QUE VOY A QUITAR EL EXPERTISE BAR. AL FINAL  -->
-    <div class="info__expertise_bar">
-        <Picture src={plus} alt="+" class="expertise_bar__icon" />
-        <Picture src={minus} alt="-" class="expertise_bar__icon" />
-    </div>
+    <div class="info__expertise_bar"></div>
     <div class="info__techs_info">
-
+        <div class="techs_info__icon_and_tag">
             <Picture src={java} alt="Java" class="techs_info__icon" />
-            <Picture src={kotlin} alt="Java" class="techs_info__icon" />
+            <span class="techs_info__tag">JAVA<br>Level of expertise: High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={kotlin} alt="Kotlin" class="techs_info__icon" />
+            <span class="techs_info__tag">Kotlin<br>Level of expertise: High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={spring} alt="Spring" class="techs_info__icon" />
+            <span class="techs_info__tag">Spring Framework<br>Level of expertise: High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={nodejs} alt="Spring" class="techs_info__icon" />
+            <span class="techs_info__tag">NodeJS<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={js} alt="JavaScript" class="techs_info__icon" />
+            <span class="techs_info__tag">JavaScript<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={html5} alt="HTML5" class="techs_info__icon" />
+            <span class="techs_info__tag">HTML<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={css3} alt="CSS3" class="techs_info__icon" />
+            <span class="techs_info__tag">CSS<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={sass} alt="SASS" class="techs_info__icon" />
+            <span class="techs_info__tag">SASS<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={laravel} alt="Laravel" class="techs_info__icon" />
+            <span class="techs_info__tag">Laravel Framework<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={mongodb} alt="MongoDB" class="techs_info__icon" />
+            <span class="techs_info__tag">MongoDB<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={mysql} alt="MySQL" class="techs_info__icon" />
+            <span class="techs_info__tag">MySQL<br>Level of expertise: Medium/High</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
             <Picture src={astro} alt="Astro" class="techs_info__icon" />
-
+            <span class="techs_info__tag">Astro<br>Level of expertise: Medium</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={python} alt="Python" class="techs_info__icon" />
+            <span class="techs_info__tag">Python<br>Level of expertise: Medium/Low</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={php} alt="PHP" class="techs_info__icon" />
+            <span class="techs_info__tag">PHP<br>Level of expertise: Medium</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={git} alt="Git" class="techs_info__icon" />
+            <span class="techs_info__tag">Git<br>Level of expertise: Medium</span>
+        </div>
+        <div class="techs_info__icon_and_tag">
+            <Picture src={ubuntu} alt="Ubuntu" class="techs_info__icon" />
+            <span class="techs_info__tag">Ubuntu<br>Level of expertise: Medium</span>
         </div>
     </div>
 </div>
