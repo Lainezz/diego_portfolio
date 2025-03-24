@@ -4,147 +4,147 @@
 @mixin grid_desktop {
     .dark {
         .main__grid {
-            @include base_grid_layout();
+            @include base_grid_layout(); // located in mixins.scss
 
             .grid__bio {
-                @include create_black_grid_element(1, 5, 1, 5);
-                @include bio;
+                @include create_black_grid_element(1, 5, 1, 5); // located in mixins.scss
+                @include bio; // located in grid_elements.scss
             }
             .grid__socials {
-                @include create_black_grid_element(5, 10, 1, 2);
-                @include socials;
+                @include create_black_grid_element(7, 10, 1, 2); // located in mixins.scss
+                @include socials; // located in grid_elements.scss
             }
             .grid__funct_1 {
-                @include create_striped_funct_grid_element(1, 2, 5, 8);
-                @include funct;
+                @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__hobbies {
-                @include create_black_grid_element(2, 5, 5, 8);
+                @include create_black_grid_element(2, 5, 5, 8); // located in mixins.scss
             }
             .grid__funct_2 {
-                @include create_black_funct_grid_element(5, 7, 2, 3);
+                @include create_black_funct_grid_element(5, 7, 2, 3); // located in mixins.scss
             }
             .grid__techs {
-                @include create_black_grid_element(5, 7, 3, 6);
-                @include techs;
+                @include create_black_grid_element(5, 7, 3, 6); // located in mixins.scss
+                @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_black_grid_element(5, 7, 6, 8);
+                @include create_black_grid_element(5, 7, 6, 8); // located in mixins.scss
             }
             .grid__experience {
-                @include create_black_grid_element(7, 9, 2, 9);
+                @include create_black_grid_element(7, 9, 2, 9); // located in mixins.scss
             }
             .grid__funct_3 {
-                @include create_sun_funct_grid_element(9, 10, 2, 5);
-                @include funct;
+                @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__funct_4 {
-                @include create_moon_funct_grid_element(9, 10, 5, 8);
-                @include funct;
+                @include create_moon_funct_grid_element(9, 10, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__footer {
-                @include create_black_grid_element(1, 7, 8, 9);
+                @include create_black_grid_element(1, 7, 8, 9); // located in mixins.scss
             }
             .grid__cc {
-                @include create_black_grid_element(9, 10, 8, 9);
+                @include create_black_grid_element(9, 10, 8, 9); // located in mixins.scss
             }
         }
     }
 
     .light {
         .main__grid {
-            @include base_grid_layout();
+            @include base_grid_layout(); // located in mixins.scss
 
             .grid__bio {
-                @include create_white_grid_element(1, 5, 1, 5);
-                @include bio;
+                @include create_white_grid_element(1, 5, 1, 5); // located in mixins.scss
+                @include bio; // located in grid_elements.scss
             }
             .grid__socials {
-                @include create_white_grid_element(5, 10, 1, 2);
-                @include socials;
+                @include create_white_grid_element(7, 10, 1, 2);  // located in mixins.scss
+                @include socials; // located in grid_elements.scss
             }
             .grid__funct_1 {
-                @include create_striped_funct_grid_element(1, 2, 5, 8);
-                @include funct;
+                @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__hobbies {
-                @include create_white_grid_element(2, 5, 5, 8);
+                @include create_white_grid_element(2, 5, 5, 8); // located in mixins.scss
             }
             .grid__funct_2 {
-                @include create_black_funct_grid_element(5, 7, 2, 3);
+                @include create_black_funct_grid_element(5, 7, 2, 3); // located in mixins.scss
             }
             .grid__techs {
-                @include create_white_grid_element(5, 7, 3, 6);
-                @include techs;
+                @include create_white_grid_element(5, 7, 3, 6); // located in mixins.scss
+                @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_white_grid_element(5, 7, 6, 8);
+                @include create_white_grid_element(5, 7, 6, 8); // located in mixins.scss
             }
             .grid__experience {
-                @include create_white_grid_element(7, 9, 2, 9);
+                @include create_white_grid_element(7, 9, 2, 9); // located in mixins.scss
             }
             .grid__funct_3 {
-                @include create_sun_funct_grid_element(9, 10, 2, 5);
-                @include funct;
+                @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__funct_4 {
-                @include create_moon_funct_grid_element(9, 10, 5, 8);
-                @include funct;
+                @include create_moon_funct_grid_element(9, 10, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__footer {
-                @include create_white_grid_element(1, 7, 8, 9);
+                @include create_white_grid_element(1, 7, 8, 9); // located in mixins.scss
             }
             .grid__cc {
-                @include create_white_grid_element(9, 10, 8, 9);
+                @include create_white_grid_element(9, 10, 8, 9); // located in mixins.scss
             }
         }
     }
 
     .colorful {
         .main__grid {
-            @include base_grid_layout();
+            @include base_grid_layout(); // located in mixins.scss
 
             .grid__bio {
-                @include create_colorful_grid_element(1, 5, 1, 5);
-                @include bio;
+                @include create_colorful_grid_element(1, 5, 1, 5); // located in mixins.scss
+                @include bio; // located in grid_elements.scss
             }
             .grid__socials {
-                @include create_colorful_grid_element(5, 10, 1, 2);
-                @include socials;
+                @include create_colorful_grid_element(7, 10, 1, 2);  // located in mixins.scss
+                @include socials; // located in grid_elements.scss
             }
             .grid__funct_1 {
-                @include create_striped_funct_grid_element(1, 2, 5, 8);
-                @include funct;
+                @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__hobbies {
-                @include create_colorful_grid_element(2, 5, 5, 8);
+                @include create_colorful_grid_element(2, 5, 5, 8); // located in mixins.scss
             }
             .grid__funct_2 {
-                @include create_black_funct_grid_element(5, 7, 2, 3);
+                @include create_black_funct_grid_element(5, 7, 2, 3); // located in mixins.scss
             }
             .grid__techs {
-                @include create_colorful_grid_element(5, 7, 3, 6);
-                @include techs;
+                @include create_colorful_grid_element(5, 7, 3, 6); // located in mixins.scss
+                @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_colorful_grid_element(5, 7, 6, 8);
+                @include create_colorful_grid_element(5, 7, 6, 8); // located in mixins.scss
             }
             .grid__experience {
-                @include create_colorful_grid_element(7, 9, 2, 9);
+                @include create_colorful_grid_element(7, 9, 2, 9); // located in mixins.scss
             }
             .grid__funct_3 {
-                @include create_sun_funct_grid_element(9, 10, 2, 5);
-                @include funct;
+                @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__funct_4 {
-                @include create_moon_funct_grid_element(9, 10, 5, 8);
-                @include funct;
+                @include create_moon_funct_grid_element(9, 10, 5, 8); // located in mixins.scss
+                @include funct; // located in grid_elements.scss
             }
             .grid__footer {
-                @include create_colorful_grid_element(1, 7, 8, 9);
+                @include create_colorful_grid_element(1, 7, 8, 9); // located in mixins.scss
             }
             .grid__cc {
-                @include create_colorful_grid_element(9, 10, 8, 9);
+                @include create_colorful_grid_element(9, 10, 8, 9); // located in mixins.scss
             }
         }
     }

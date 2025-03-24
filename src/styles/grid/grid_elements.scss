@@ -36,11 +36,15 @@
 @mixin socials {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     .socials__icon {
         width: 2em;
         height: auto;
+    }
+
+    .socials__a {
+        //padding-right: 1em;
     }
 
     .display_none {
@@ -91,7 +95,7 @@
 
             padding-left: .5em;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
 
             
