@@ -149,6 +149,55 @@
     }
 }
 
+@mixin experience {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: .5em;
+
+    .experience__exp_edu {
+        min-height: 45%;
+        
+        
+
+        .exp_edu__title {
+            font-weight: bold;
+            border-bottom: 2px solid var(--font-color);
+        }
+
+        .exp_edu__jobs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            
+            
+            background-color: brown;
+
+            .jobs__jobs_container {
+                padding-bottom: .5em;
+
+
+                .jobs_container__title_logo {
+                    display: flex;
+                    align-items: center;
+                    column-gap: .5em;
+
+                    .title_logo__title {
+                    }
+
+                    .title_logo__logo {
+                        width: 2em;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 @mixin funct {
     display: flex;
     flex-direction: column;
