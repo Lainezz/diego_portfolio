@@ -11,7 +11,6 @@
     .info__text {
         position: relative;
         max-width: 80%;
-        background-color: rgb(27, 59, 59);
 
         z-index: 2;
     }
@@ -304,6 +303,16 @@
             
         }
 
+    }
+}
+
+@mixin hobbies {
+    .hobbies__title {
+        font-weight: bold;
+    }
+
+    .hobbies__desc {
+        padding-top: 1em;
     }
 }
 
