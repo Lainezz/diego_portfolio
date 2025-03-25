@@ -1,0 +1,18 @@
+---
+import { Picture } from "astro:assets";
+import spanish from "../../assets/images/langs/spanish.svg";
+import english from "../../assets/images/langs/murica.svg";
+---
+<div class="langs__title">LANGS</div>
+<div class="langs__info">
+    <div class="langs_info__icon_and_tag">
+        <Picture src={spanish} alt="Spanish" class="langs_info__icon" />
+        <span class="langs_info__tag-level">Native</span>
+        <span class="langs_info__tag"><strong>Spanish</strong><br>Level of expertise: Native</span>
+    </div>
+    <div class="langs_info__icon_and_tag">
+        <Picture src={english} alt="English" class="langs_info__icon" />
+        <span class="langs_info__tag-level">Professional</span>
+        <span class="langs_info__tag"><strong>English</strong><br>Level of expertise: professional</span>
+    </div>
+</div>

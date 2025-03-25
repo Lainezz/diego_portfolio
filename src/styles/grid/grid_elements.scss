@@ -59,21 +59,12 @@
 
     .techs__info {
         display: flex;
+        column-gap: .5em;
         min-height: 90%;
         padding-top: 1em;
 
         .info__expertise_bar {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1em 0.5em 1em 0;
-
-            .expertise_bar__icon {
-                width: .5em;
-                height: auto;
-            }
         }
 
         .info__expertise_bar::after {
@@ -93,12 +84,11 @@
 
         .info__techs_info {
 
-            padding-left: .5em;
+            
             display: flex;
+            align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-
-            
 
             .techs_info__icon_and_tag {
 
@@ -159,32 +149,24 @@
     .experience__exp_edu {
         min-height: 45%;
         
-        
-
         .exp_edu__title {
             font-weight: bold;
             border-bottom: 2px solid var(--font-color);
         }
 
         .exp_edu__jobs {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-            
-            
-            background-color: brown;
-
+                   
             .jobs__jobs_container {
-                padding-bottom: .5em;
+                padding-top: 1em;
 
 
                 .jobs_container__title_logo {
                     display: flex;
-                    align-items: center;
+                    align-items: baseline;
                     column-gap: .5em;
 
                     .title_logo__title {
+                        
                     }
 
                     .title_logo__logo {
@@ -192,10 +174,137 @@
                         height: auto;
                     }
                 }
+
+                .jobs_container__desc {
+                    font-size: smaller;
+                }
+            }
+        }
+
+        .exp_edu__edu {
+            .edu__edu_container {
+                padding-top: 1em;
+
+                .edu_container__title_logo {
+                    display: flex;
+                    align-items: center;
+                    column-gap: .5em;
+
+                    .title_logo__title {
+                        
+                    }
+
+                    .title_logo__logo {
+                        width: 2em;
+                        height: auto;
+                    }
+                }
+
+                .edu_container__desc {
+                    font-size: smaller;
+                }
+
             }
         }
     }
 
+}
+
+@mixin langs {
+    .langs__title {
+        font-weight: bold;
+    }
+
+    .langs__info {
+        display: flex;
+        min-height: 90%;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .langs_info__icon_and_tag {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .langs_info__icon {
+                width: 3em;
+                height: auto;
+                cursor: pointer;
+                
+                transition: all .1s ease-out;
+
+            }
+            .langs_info__icon:hover {
+                transform: scale(1.4);
+            }
+
+            .langs_info__tag-level {
+                font-size: smaller;
+                padding-top: .5em;
+            }
+
+            .langs_info__tag {
+                padding: .5em;
+                width: 17em;
+                border: 1px solid var(--font-color);
+                border-radius: 1em;
+                
+                position: absolute;
+                top: -4.5em;
+                left: 0;
+                
+                visibility: hidden;
+                opacity: 0;
+                z-index: 3;
+                
+                background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
+                color: var(--font-color);
+                font-size: smaller;
+            }
+        }
+
+        .langs_info__icon_and_tag:hover .langs_info__tag {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin footer {
+    .footer__container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: smaller;
+
+        .container__thanks {
+            min-width: 3em;
+        }
+
+        .container__cc {
+
+            .cc__div {
+                display: flex;
+                
+
+                .cc_div__a {
+                    display: flex;
+                    text-decoration: none;
+                    color: $base_color_orange;
+    
+                    .a__img {
+                        width: 1.5em;
+                        height: auto;
+                    }
+                }
+            }
+            
+        }
+
+    }
 }
 
 @mixin funct {

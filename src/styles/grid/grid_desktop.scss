@@ -22,11 +22,12 @@
                 @include create_black_grid_element(2, 5, 5, 8); // located in mixins.scss
             }
             .grid__techs {
-                @include create_black_grid_element(5, 7, 3, 6); // located in mixins.scss
+                @include create_black_grid_element(5, 7, 1, 6); // located in mixins.scss
                 @include techs; // located in grid_elements.scss
             }
             .grid__lang {
                 @include create_black_grid_element(5, 7, 6, 8); // located in mixins.scss
+                @include langs;
             }
             .grid__experience {
                 @include create_black_grid_element(7, 9, 2, 9); // located in mixins.scss
@@ -42,6 +43,7 @@
             }
             .grid__footer {
                 @include create_black_grid_element(1, 7, 8, 9); // located in mixins.scss
+                @include footer;
             }
             .grid__cc {
                 //@include create_black_grid_element(9, 10, 8, 9); // located in mixins.scss
@@ -78,6 +80,7 @@
             }
             .grid__lang {
                 @include create_white_grid_element(5, 7, 6, 8); // located in mixins.scss
+                @include langs;
             }
             .grid__experience {
                 @include create_white_grid_element(7, 9, 2, 9); // located in mixins.scss
@@ -93,6 +96,7 @@
             }
             .grid__footer {
                 @include create_white_grid_element(1, 7, 8, 9); // located in mixins.scss
+                @include footer;
             }
             .grid__cc {
                 //@include create_white_grid_element(9, 10, 8, 9); // located in mixins.scss
@@ -129,6 +133,7 @@
             }
             .grid__lang {
                 @include create_colorful_grid_element(5, 7, 6, 8); // located in mixins.scss
+                @include langs;
             }
             .grid__experience {
                 @include create_colorful_grid_element(7, 9, 2, 9); // located in mixins.scss
@@ -144,6 +149,7 @@
             }
             .grid__footer {
                 @include create_colorful_grid_element(1, 7, 8, 9); // located in mixins.scss
+                @include footer;
             }
             .grid__cc {
                 //@include create_colorful_grid_element(9, 10, 8, 9); // located in mixins.scss
