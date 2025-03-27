@@ -1,9 +1,31 @@
 @use "./grid/grid_desktop.scss" as *;
+@use "./grid/grid_desktop_md.scss" as *;
 @use "./grid/grid_mobile.scss" as *;
 @use "./global.scss" as *;
 
+*,
+*::before,
+*::after {
+    font-size: x-small;
+}
 @include grid_mobile;
 
 @include responsive($width-sm-desktop) {
+    *,
+    *::before,
+    *::after {
+        font-size: small;
+    }
+
     @include grid_desktop;
+}
+
+@include responsive($width-md-desktop) {
+    *,
+    *::before,
+    *::after {
+        font-size: large;
+    }
+
+    @include grid_desktop_md;
 }

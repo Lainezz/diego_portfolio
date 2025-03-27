@@ -140,11 +140,6 @@
 
 @mixin experience {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: .5em;
-
     .experience__exp_edu {
         min-height: 45%;
         
@@ -156,7 +151,7 @@
         .exp_edu__jobs {
                    
             .jobs__jobs_container {
-                padding-top: 1em;
+                padding-bottom: .5em;
 
 
                 .jobs_container__title_logo {

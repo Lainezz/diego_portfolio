@@ -1,7 +1,7 @@
 @use "../global.scss" as *; // Import global variables
 @use "./grid_elements.scss" as *;
 
-@mixin grid_desktop {
+@mixin grid_desktop_md {
     .dark {
         .main__grid {
             @include base_grid_layout(); // located in mixins.scss
@@ -23,11 +23,11 @@
                 @include hobbies;
             }
             .grid__techs {
-                @include create_black_grid_element(5, 7, 3, 7); // located in mixins.scss
+                @include create_black_grid_element(5, 7, 2, 6); // located in mixins.scss
                 @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_black_grid_element(5, 7, 7, 8); // located in mixins.scss
+                @include create_black_grid_element(5, 7, 6, 8); // located in mixins.scss
                 @include langs;
             }
             .grid__experience {
@@ -76,11 +76,11 @@
             }
             
             .grid__techs {
-                @include create_white_grid_element(5, 7, 3, 7); // located in mixins.scss
+                @include create_white_grid_element(5, 7, 3, 6); // located in mixins.scss
                 @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_white_grid_element(5, 7, 7, 8); // located in mixins.scss
+                @include create_white_grid_element(5, 7, 6, 8); // located in mixins.scss
                 @include langs;
             }
             .grid__experience {
@@ -129,11 +129,11 @@
             }
             
             .grid__techs {
-                @include create_colorful_grid_element(5, 7, 3, 7); // located in mixins.scss
+                @include create_colorful_grid_element(5, 7, 3, 6); // located in mixins.scss
                 @include techs; // located in grid_elements.scss
             }
             .grid__lang {
-                @include create_colorful_grid_element(5, 7, 7, 8); // located in mixins.scss
+                @include create_colorful_grid_element(5, 7, 6, 8); // located in mixins.scss
                 @include langs;
             }
             .grid__experience {
