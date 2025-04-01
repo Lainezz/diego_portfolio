@@ -18,9 +18,9 @@
                 @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
                 @include funct; // located in grid_elements.scss
             }
-            .grid__hobbies {
+            .grid__projects {
                 @include create_black_grid_element(2, 5, 5, 8); // located in mixins.scss
-                @include hobbies;
+                @include projects;
             }
             .grid__techs {
                 @include create_black_grid_element(5, 7, 2, 6); // located in mixins.scss
@@ -71,9 +71,9 @@
                 @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
                 @include funct; // located in grid_elements.scss
             }
-            .grid__hobbies {
+            .grid__projects {
                 @include create_white_grid_element(2, 5, 5, 8); // located in mixins.scss
-                @include hobbies;
+                @include projects;
             }
             
             .grid__techs {
@@ -125,9 +125,9 @@
                 @include create_striped_funct_grid_element(1, 2, 5, 8); // located in mixins.scss
                 @include funct; // located in grid_elements.scss
             }
-            .grid__hobbies {
+            .grid__projects {
                 @include create_colorful_grid_element(2, 5, 5, 8); // located in mixins.scss
-                @include hobbies;
+                @include projects;
             }
             
             .grid__techs {
