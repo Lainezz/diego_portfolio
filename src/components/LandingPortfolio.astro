@@ -30,11 +30,15 @@ import Experience from "./change_theme_divs/Experience.astro";
 import Langs from "./change_theme_divs/Langs.astro";
 import Footer from "./change_theme_divs/Footer.astro";
 import Hobbies from "./change_theme_divs/Hobbies.astro";
+import CV from "./change_theme_divs/CV.astro";
 ---
 
 <main class="main__grid">
     <section class="grid__bio">
         <Bio />
+    </section>
+    <section class="grid__cv">
+        <CV />
     </section>
     <section class="grid__socials">
         <Socials />
@@ -42,7 +46,6 @@ import Hobbies from "./change_theme_divs/Hobbies.astro";
     <section class="grid__hobbies">
         <Hobbies />
     </section>
-
     <section class="grid__techs">
         <Techs />
     </section>
@@ -55,7 +58,7 @@ import Hobbies from "./change_theme_divs/Hobbies.astro";
     <section class="grid__footer">
         <Footer />
     </section>
-    <!-- <section class="grid__cc"></section> -->
+    
 
     <FunctDivs />
 </main>

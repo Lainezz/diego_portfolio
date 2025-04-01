@@ -10,15 +10,18 @@
 
     .info__text {
         position: relative;
-        max-width: 80%;
 
         z-index: 2;
+
+        .text__first {
+            max-width: 80%;
+        }
     }
 
     .info__photo {
         position: absolute;
         right: 2em;
-        bottom: 2em;
+        top: 2em;
 
         background-color: chocolate;
         width: 8em;
@@ -29,6 +32,56 @@
         justify-content: center;
 
         z-index: 1;
+    }
+}
+
+@mixin cv {
+    .cv__cv_a {
+        text-decoration: none;
+        color: inherit;
+        font-family: inherit;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+
+        .cv_a__text {
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+
+            
+        }
+
+        .cv_a__icon {
+            width: 7em;
+            height: auto;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: 1;
+        }
+    }
+
+    .cv__cv_a:hover .cv_a__icon {
+        animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+        0%,
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
     }
 }
 
@@ -58,7 +111,7 @@
 
     .techs__info {
         display: flex;
-        column-gap: .5em;
+        column-gap: 0.5em;
         min-height: 90%;
         padding-top: 1em;
 
@@ -74,63 +127,52 @@
             width: 3px;
             height: 100%;
             border-radius: 1em;
-            background: linear-gradient(
-                rgba(206, 255, 178, 1) 0%,
-                rgba(90, 158, 185, 1) 50%,
-                rgb(185, 88, 88) 100%
-            );
+            background: linear-gradient(rgba(206, 255, 178, 1) 0%, rgba(90, 158, 185, 1) 50%, rgb(185, 88, 88) 100%);
         }
 
         .info__techs_info {
-
-            
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
 
             .techs_info__icon_and_tag {
-
                 position: relative;
                 flex: 0 0 25%;
-                padding-left: .5em;
+                padding-left: 0.5em;
 
                 .techs_info__icon {
-
                     width: 3em;
                     height: auto;
                     cursor: pointer;
-    
-                    transition: all .1s ease-out;
+
+                    transition: all 0.1s ease-out;
                 }
-    
+
                 .techs_info__tag {
-                    padding: .5em;
+                    padding: 0.5em;
                     width: 17em;
                     border: 1px solid var(--font-color);
                     border-radius: 1em;
-                    
+
                     position: absolute;
                     top: -4.5em;
                     left: 0;
-                    
+
                     visibility: hidden;
                     opacity: 0;
                     z-index: 3;
-                    
+
                     background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
                     color: var(--font-color);
                     font-size: smaller;
-                    
-                    
                 }
                 .techs_info__icon:hover {
                     transform: scale(1.6);
                 }
-                
             }
 
-            .techs_info__icon_and_tag:hover .techs_info__tag{
+            .techs_info__icon_and_tag:hover .techs_info__tag {
                 visibility: visible;
                 opacity: 1;
             }
@@ -139,28 +181,25 @@
 }
 
 @mixin experience {
-
     .experience__exp_edu {
         min-height: 45%;
-        
+        margin-bottom: 1em;
+
         .exp_edu__title {
             font-weight: bold;
             border-bottom: 2px solid var(--font-color);
         }
 
         .exp_edu__jobs {
-                   
             .jobs__jobs_container {
-                padding-bottom: .5em;
-
+                padding-top: 1em;
 
                 .jobs_container__title_logo {
                     display: flex;
                     align-items: baseline;
-                    column-gap: .5em;
+                    column-gap: 0.5em;
 
                     .title_logo__title {
-                        
                     }
 
                     .title_logo__logo {
@@ -182,10 +221,9 @@
                 .edu_container__title_logo {
                     display: flex;
                     align-items: center;
-                    column-gap: .5em;
+                    column-gap: 0.5em;
 
                     .title_logo__title {
-                        
                     }
 
                     .title_logo__logo {
@@ -197,11 +235,9 @@
                 .edu_container__desc {
                     font-size: smaller;
                 }
-
             }
         }
     }
-
 }
 
 @mixin langs {
@@ -226,9 +262,8 @@
                 width: 3em;
                 height: auto;
                 cursor: pointer;
-                
-                transition: all .1s ease-out;
 
+                transition: all 0.1s ease-out;
             }
             .langs_info__icon:hover {
                 transform: scale(1.4);
@@ -236,23 +271,23 @@
 
             .langs_info__tag-level {
                 font-size: smaller;
-                padding-top: .5em;
+                padding-top: 0.5em;
             }
 
             .langs_info__tag {
-                padding: .5em;
+                padding: 0.5em;
                 width: 17em;
                 border: 1px solid var(--font-color);
                 border-radius: 1em;
-                
+
                 position: absolute;
                 top: -4.5em;
                 left: 0;
-                
+
                 visibility: hidden;
                 opacity: 0;
                 z-index: 3;
-                
+
                 background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
                 color: var(--font-color);
                 font-size: smaller;
@@ -268,7 +303,6 @@
 
 @mixin footer {
     .footer__container {
-
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -279,35 +313,31 @@
         }
 
         .container__cc {
-
             .cc__div {
                 display: flex;
-                
 
                 .cc_div__a {
                     display: flex;
                     text-decoration: none;
                     color: $base_color_orange;
-    
+
                     .a__img {
                         width: 1.5em;
                         height: auto;
                     }
                 }
             }
-            
         }
-
     }
 }
 
 @mixin hobbies {
     .hobbies__title {
         font-weight: bold;
+        margin-bottom: 1em;
     }
 
     .hobbies__desc {
-        padding-top: 1em;
     }
 }
 

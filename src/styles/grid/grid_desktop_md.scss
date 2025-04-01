@@ -73,6 +73,7 @@
             }
             .grid__hobbies {
                 @include create_white_grid_element(2, 5, 5, 8); // located in mixins.scss
+                @include hobbies;
             }
             
             .grid__techs {
@@ -126,6 +127,7 @@
             }
             .grid__hobbies {
                 @include create_colorful_grid_element(2, 5, 5, 8); // located in mixins.scss
+                @include hobbies;
             }
             
             .grid__techs {
