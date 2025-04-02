@@ -1,10 +1,187 @@
 <div class="projects__title">PROJECTS</div>
-<div class="projects__projects_desc">
-
-    <div>Portfolio Diego</div>
-    <div>API REST NodeJS</div>
-    <div>API REST Spring Boot (Java)</div>
-    <div>API REST Spring boot (Kotlin)</div>
-
-    <div>TODO: Tengo que documentar los proyectos en github, buscar una imagen para cada uno y vincularlos aquí</div>
+<div class="projects__projects_container">
+    <div class="projects_container__project" id="project-portfolio">
+        <div class="project__title_project">Portfolio Diego</div>
+        <div class="project__desc_project">
+            Built with AstroJS, SASS, and Tailwind. Bento style, responsive and modular design.
+        </div>
+    </div>
+    
+    <div class="projects_container__project" id="project-apijava">
+        <div class="project__title_project">API REST Spring Boot (Java)</div>
+        <div class="project__desc_project">RESTful structure with JWT authentication via OAuth2</div>
+    </div>
+    <div class="projects_container__project" id="project-apinode">
+        <div class="project__title_project">API REST NodeJS</div>
+        <div class="project__desc_project">Following REST principles. Instead of JWT I implemented an authentication system by session</div>
+    </div>
+    <div class="projects_container__project" id="project-apikotlin">
+        <div class="project__title_project">API REST Spring Boot (KT)</div>
+        <div class="project__desc_project">Various projects with MySQL and MongoDB. Authentication with JWT via Oauth2</div>
+    </div>
 </div>
+
+<script is:inline>
+
+    function changeProjectsListener() {
+
+        const projectPortfolio = document.querySelector("#project-portfolio");
+        const projectApiNode = document.querySelector("#project-apinode");
+        const projectApiJava = document.querySelector("#project-apijava");
+        const projectApiKotlin = document.querySelector("#project-apikotlin");
+
+        const iconjava = document.querySelector("#icon-java");
+        const iconkotlin = document.querySelector("#icon-kotlin");
+        const iconspring = document.querySelector("#icon-spring");
+        const iconnode = document.querySelector("#icon-node");
+        const iconjs = document.querySelector("#icon-js");
+        const iconhtml = document.querySelector("#icon-html");
+        const iconcss = document.querySelector("#icon-css");
+        const iconsass = document.querySelector("#icon-sass");
+        const iconlaravel = document.querySelector("#icon-laravel");
+        const iconmongodb = document.querySelector("#icon-mongodb");
+        const iconmysql = document.querySelector("#icon-mysql");
+        const iconastro = document.querySelector("#icon-astro");
+        const iconpython = document.querySelector("#icon-python");
+        const iconphp = document.querySelector("#icon-php");
+        const icongit = document.querySelector("#icon-git");
+        const iconubuntu = document.querySelector("#icon-ubuntu");
+
+        projectPortfolio.addEventListener("mouseenter", () => {
+            iconjava.style.filter = 'grayscale(100%)';
+            iconkotlin.style.filter = 'grayscale(100%)';
+            iconspring.style.filter = 'grayscale(100%)';
+            iconnode.style.filter = 'grayscale(100%)';
+            iconlaravel.style.filter = 'grayscale(100%)';
+            iconmongodb.style.filter = 'grayscale(100%)';
+            iconmysql.style.filter = 'grayscale(100%)';
+            iconpython.style.filter = 'grayscale(100%)';
+            iconphp.style.filter = 'grayscale(100%)';
+            iconubuntu.style.filter = 'grayscale(100%)';
+        })
+
+        projectPortfolio.addEventListener("mouseleave", () => {
+            iconjava.style.filter = 'none';
+            iconkotlin.style.filter = 'none';
+            iconspring.style.filter = 'none';
+            iconnode.style.filter = 'none';
+            iconlaravel.style.filter = 'none';
+            iconmongodb.style.filter = 'none';
+            iconmysql.style.filter = 'none';
+            iconpython.style.filter = 'none';
+            iconphp.style.filter = 'none';
+            iconubuntu.style.filter = 'none';
+        })
+
+        projectApiNode.addEventListener("mouseenter", () => {
+            iconjava.style.filter = 'grayscale(100%)';
+            iconkotlin.style.filter = 'grayscale(100%)';
+            iconspring.style.filter = 'grayscale(100%)';
+
+            iconhtml.style.filter = 'grayscale(100%)';
+            iconcss.style.filter = 'grayscale(100%)';
+            iconsass.style.filter = 'grayscale(100%)';
+            iconlaravel.style.filter = 'grayscale(100%)';
+
+            iconmysql.style.filter = 'grayscale(100%)';
+            iconastro.style.filter = 'grayscale(100%)';
+            iconpython.style.filter = 'grayscale(100%)';
+            iconphp.style.filter = 'grayscale(100%)';
+            iconubuntu.style.filter = 'grayscale(100%)';
+
+        })
+
+        projectApiNode.addEventListener("mouseleave", () => {
+            iconjava.style.filter = 'none';
+            iconkotlin.style.filter = 'none';
+            iconspring.style.filter = 'none';
+
+            iconhtml.style.filter = 'none';
+            iconcss.style.filter = 'none';
+            iconsass.style.filter = 'none';
+            iconlaravel.style.filter = 'none';
+
+            iconmysql.style.filter = 'none';
+            iconastro.style.filter = 'none';
+            iconpython.style.filter = 'none';
+            iconphp.style.filter = 'none';
+            iconubuntu.style.filter = 'none';
+
+        })
+
+        projectApiJava.addEventListener("mouseenter", () => {
+
+            iconkotlin.style.filter = 'grayscale(100%)';
+
+            iconnode.style.filter = 'grayscale(100%)';
+            iconjs.style.filter = 'grayscale(100%)';
+            iconhtml.style.filter = 'grayscale(100%)';
+            iconcss.style.filter = 'grayscale(100%)';
+            iconsass.style.filter = 'grayscale(100%)';
+            iconlaravel.style.filter = 'grayscale(100%)';
+            iconmongodb.style.filter = 'grayscale(100%)';
+
+            iconastro.style.filter = 'grayscale(100%)';
+            iconpython.style.filter = 'grayscale(100%)';
+            iconphp.style.filter = 'grayscale(100%)';
+
+        })
+
+        projectApiJava.addEventListener("mouseleave", () => {
+
+            iconkotlin.style.filter = 'none';
+
+            iconnode.style.filter = 'none';
+            iconjs.style.filter = 'none';
+            iconhtml.style.filter = 'none';
+            iconcss.style.filter = 'none';
+            iconsass.style.filter = 'none';
+            iconlaravel.style.filter = 'none';
+            iconmongodb.style.filter = 'none';
+
+            iconastro.style.filter = 'none';
+            iconpython.style.filter = 'none';
+            iconphp.style.filter = 'none';
+
+        })
+
+        projectApiKotlin.addEventListener("mouseenter", () => {
+            
+            iconjava.style.filter = 'grayscale(100%)';
+
+
+            iconnode.style.filter = 'grayscale(100%)';
+            iconjs.style.filter = 'grayscale(100%)';
+            iconhtml.style.filter = 'grayscale(100%)';
+            iconcss.style.filter = 'grayscale(100%)';
+            iconsass.style.filter = 'grayscale(100%)';
+            iconlaravel.style.filter = 'grayscale(100%)';
+
+            iconastro.style.filter = 'grayscale(100%)';
+            iconpython.style.filter = 'grayscale(100%)';
+            iconphp.style.filter = 'grayscale(100%)';
+
+        })
+
+        projectApiKotlin.addEventListener("mouseleave", () => {
+
+            iconjava.style.filter = 'none';
+
+            iconnode.style.filter = 'none';
+            iconjs.style.filter = 'none';
+            iconhtml.style.filter = 'none';
+            iconcss.style.filter = 'none';
+            iconsass.style.filter = 'none';
+            iconlaravel.style.filter = 'none';
+
+            iconastro.style.filter = 'none';
+            iconpython.style.filter = 'none';
+            iconphp.style.filter = 'none';
+
+        })
+
+    }
+
+
+    window.addEventListener("DOMContentLoaded", changeProjectsListener);
+</script>
