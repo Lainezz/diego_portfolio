@@ -38,6 +38,10 @@
                 @include create_black_grid_element(7, 9, 2, 9); // located in mixins.scss
                 @include experience;
             }
+            .grid__faq {
+                @include create_black_grid_element(7, 8, 2, 4); // located in mixins.scss
+                @include faq;
+            }
             .grid__funct_3 {
                 @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss
                 @include funct; // located in grid_elements.scss
@@ -94,6 +98,10 @@
                 @include create_white_grid_element(7, 9, 2, 9); // located in mixins.scss
                 @include experience;
             }
+            .grid__faq {
+                @include create_white_grid_element(7, 8, 2, 4); // located in mixins.scss
+                @include faq;
+            }
             .grid__funct_3 {
                 @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss
                 @include funct; // located in grid_elements.scss
@@ -148,6 +156,10 @@
             .grid__experience {
                 @include create_colorful_grid_element(7, 9, 2, 9); // located in mixins.scss
                 @include experience;
+            }
+            .grid__faq {
+                @include create_colorful_grid_element(7, 8, 2, 4); // located in mixins.scss
+                @include faq;
             }
             .grid__funct_3 {
                 @include create_sun_funct_grid_element(9, 10, 2, 5); // located in mixins.scss

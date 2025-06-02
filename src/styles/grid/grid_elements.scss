@@ -53,8 +53,6 @@
             font-weight: bold;
             position: relative;
             z-index: 2;
-
-            
         }
 
         .cv_a__icon {
@@ -105,7 +103,6 @@
 }
 
 @mixin techs {
-
     position: relative;
 
     .techs__title {
@@ -182,7 +179,7 @@
 
             .techs__and_more {
                 position: absolute;
-                bottom: .5em;
+                bottom: 0.5em;
                 right: 1em;
 
                 font-size: smaller;
@@ -207,11 +204,10 @@
 
                 .jobs_container__title_logo {
                     display: flex;
-                    align-items: baseline;
+                    align-items: center;
                     column-gap: 0.5em;
 
-                    .title_logo__title {
-                    }
+
 
                     .title_logo__logo {
                         width: 2em;
@@ -220,7 +216,14 @@
                 }
 
                 .jobs_container__desc {
+                    margin: 0;
                     font-size: smaller;
+
+                    .desc__bold_title {
+                        margin: 0;
+                        font-weight: bold;
+                        font-size: smaller;
+                    }
                 }
             }
         }
@@ -235,6 +238,7 @@
                     column-gap: 0.5em;
 
                     .title_logo__title {
+
                     }
 
                     .title_logo__logo {
@@ -349,7 +353,6 @@
     }
 
     .projects__projects_container {
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -357,18 +360,15 @@
         row-gap: 1em;
         flex-wrap: wrap;
 
-
         .projects_container__project {
             min-height: 7em;
             flex: 0 45%;
 
-
-            padding: .5em;
+            padding: 0.5em;
             border: 1px solid var(--font-color);
             background-color: var(--background-color);
 
-            border-radius: .5em;
-            
+            border-radius: 0.5em;
 
             .project__title_project {
                 position: relative;
@@ -378,11 +378,14 @@
             }
 
             .project__desc_project {
-                padding-top: .5em;
+                padding-top: 0.5em;
                 font-size: smaller;
-                
             }
         }
+    }
+
+    .projects_container__project:hover {
+        box-shadow: 0 0 2px 1px var(--font-color);
     }
 }
 
@@ -412,5 +415,19 @@
             width: 2em;
             height: auto;
         }
+    }
+}
+
+@mixin faq {
+    .faq__faq {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: xx-large;
+        text-decoration: none;
+        color: var(--font-color);
+        letter-spacing: 0.5em;
+        height: 100%;
     }
 }
