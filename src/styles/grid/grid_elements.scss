@@ -21,17 +21,22 @@
     .info__photo {
         position: absolute;
         right: 2em;
-        bottom: 2em;
+        bottom: 0.7em;
 
-        background-color: chocolate;
-        width: 10em;
-        height: 11em;
+        width: 9em;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
+        border-bottom: 3px solid var(--font-color);
+
         z-index: 1;
+
+        .photo__img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -207,8 +212,6 @@
                     align-items: center;
                     column-gap: 0.5em;
 
-
-
                     .title_logo__logo {
                         width: 2em;
                         height: auto;
@@ -238,7 +241,6 @@
                     column-gap: 0.5em;
 
                     .title_logo__title {
-
                     }
 
                     .title_logo__logo {
